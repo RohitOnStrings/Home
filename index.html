@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Stop Guitar Course</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #483AA0;
+      color: #fff;
+      overflow-x: hidden;
+      
+    }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* Mobile Hamburger style */
+
+nav {
+    background-color: #211C84;
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  ul.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  ul.nav-links li {
+    position: relative;
+  }
+  ul.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+    cursor: pointer;
+  }
+  ul.nav-links li a:hover {
+    background-color: #333;
+  }
+
+  /* Dropdown */
+  ul.nav-links li .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 160px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+  ul.nav-links li .dropdown-content a {
+    padding: 0.8rem 1rem;
+    display: block;
+    color: white;
+  }
+  ul.nav-links li .dropdown-content a:hover {
+    background-color: #444;
+  }
+  ul.nav-links li:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-container {
+      justify-content: space-between;
+    }
+    ul.nav-links {
+      flex-direction: column;
+      width: 100%;
+      background-color: #111;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+    }
+    ul.nav-links.active {
+      display: flex;
+    }
+    ul.nav-links li {
+      width: 100%;
+    }
+    ul.nav-links li:hover .dropdown-content {
+      display: none;
+    }
+    ul.nav-links li .dropdown-content {
+      position: static;
+      display: none;
+      background-color: #222;
+      width: 100%;
+    }
+    ul.nav-links li.active .dropdown-content {
+      display: flex;
+      flex-direction: column;
+    }
+    ul.nav-links li a {
+      padding: 1rem 2rem;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+
+
+
+
+/* Banner Style sheet */
+    .top-banner {
+      width: 100%;
+      animation: zoomIn 2s ease-in-out;
+    }
+    .top-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .box {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #4A102A;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 87, 51, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label, input, select {
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+    }
+    input, select {
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+    }
+    .qr-code {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .qr-code img {
+      width: 150px;
+      height: auto;
+    }
+    button {
+      margin-top: 1rem;
+      padding: 0.7rem;
+      background-color: #ff5733;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e14a27;
+    }
+    .lesson-list {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .lesson-list li {
+      margin-bottom: 0.5rem;
+      color: #FCF259;
+      text-align: justify;
+    }
+    .price-tag {
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #00ffcc;
+      font-size: 1.2rem;
+    }
+    footer {
+      background-color: #2c2c2c;
+      padding: 2rem;
+      text-align: center;
+      color: #ccc;
+      margin-top: 2rem;
+    }
+    footer p {
+      margin: 0.5rem 0;
+    }
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    .popup-banner {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 9999;
+      font-size: 1rem;
+      animation: fadeInOut 3s ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; top: 0; }
+      10% { opacity: 1; top: 20px; }
+      90% { opacity: 1; top: 20px; }
+      100% { opacity: 0; top: 0; }
+    }
+
+
+
+/* footer new */
+footer {
+  background-image: url('back.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Darker overlay */
+  z-index: 0;
+}
+
+footer * {
+  position: relative;
+  z-index: 1;
+}
+
+footer h3 {
+  color: #00fba3;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 5px #000;
+  letter-spacing: 1px;
+}
+
+footer p {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.6;
+}
+
+/* Responsive footer */
+@media (max-width: 600px) {
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  footer p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /* youtube style */
+   .shorts-slider {
+  padding: 2rem;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.shorts-slider h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #00fba3;
+}
+
+.shorts-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.shorts-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  max-width: 90vw;
+}
+
+.shorts-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.shorts-wrapper a {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.shorts-wrapper a:hover {
+  transform: scale(1.05);
+}
+
+.shorts-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.nav-btn {
+  background: #ff5733;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.nav-btn:hover {
+  background: #e14a27;
+}
+
+@media (max-width: 600px) {
+  .shorts-wrapper a {
+    flex: 0 0 80%;
+  }
+}
+
+
+
+
+/* Footer styling */
+ 
+footer {
+      background: linear-gradient(135deg, #2b1055, #7597de);
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, transparent 70%);
+      animation: pulse 5s linear infinite;
+      z-index: 0;
+    }
+
+    footer .footer-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        transform: rotate(180deg) scale(1.05);
+      }
+      100% {
+        transform: rotate(360deg) scale(1);
+      }
+    }
+
+    @media (max-width: 600px) {
+      footer {
+        font-size: 14px;
+        padding: 15px 5px;
+      }
+    }
+
+
+
+
+
+</style>
+
+
+
+<script>
+    function updatePrice() {
+      const course = document.getElementById("course").value;
+      const price = course === "beginner" || course === "intermediate" ? "Rs. 500/-" : "";
+      document.getElementById("price").innerText = price;
+    }
+
+    function validateTransactionId() {
+      const transactionId = document.getElementById("transactionId").value.trim();
+      if (transactionId === "") {
+        showBanner("Please enter a valid Transaction ID.", true);
+        return false;
+      }
+      return true;
+    }
+
+    function showBanner(message, isError = false) {
+      const banner = document.getElementById("popupBanner");
+      banner.style.backgroundColor = isError ? "#e53935" : "#4CAF50";
+      banner.innerText = message;
+      banner.style.display = "block";
+      setTimeout(() => {
+        banner.style.display = "none";
+      }, 20000);
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      if (!validateTransactionId()) return;
+
+      const form = event.target;
+      const data = new FormData(form);
+
+      showBanner('Submitting... Please wait.');
+
+      fetch('https://script.google.com/macros/s/AKfycbxNJQOaK1J4OpcR9OUGj9tMGXoNk_nyU0Q-ZK9RaDw2vQrTRS8aa730B86xgJLtwsXa7g/exec', {
+        method: 'POST',
+        body: data
+      })
+      .then(res => res.text())
+      .then(response => {
+        showBanner('Payment and Registration Successful! Course link will be sent shortly to your Email and WhatsApp.');
+        sendConfirmationEmail(data.get("email"), data.get("name"));
+        form.reset();
+        document.getElementById("price").innerText = "Rs. 500/-";
+      })
+      .catch(error => {
+        showBanner('Something went wrong. Please try again.', true);
+        console.error(error);
+      });
+    }
+
+    function sendConfirmationEmail(email, name) {
+      console.log(`Confirmation email sent to ${email} for ${name}`);
+    }
+
+function scrollShorts(direction) {
+    const container = document.getElementById("shortsContainer");
+    const scrollAmount = 300;
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
+
+
+
+  // Check if the page was reloaded
+  if (performance.navigation.type === 1) {
+    window.location.href = 'index.html'; // Or '/' if your home is at root
+  }
+
+  </script>
+</head>
+<body>
+  <div id="popupBanner" class="popup-banner"></div>
+
+ <nav>
+ <div class="nav-container">
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="javascript:location.reload()">Home</a></li>
+      <li><a href="#course">Course</a></li>
+      <li><a href="#buy">Buy</a></li>
+      <li><a href="#hl">Happy Learners</a></li>
+       <li><a href="#contact">Contact Us</a></li>
+      <li class="dropdown-li">
+        <a href="#shortsContainer" class="dropdown-toggle">Member Portal ▾</a>
+        <div class="dropdown-content">
+          <a href="https://rohitonstrings.github.io/MemberPortal/">Login - Strumming Members</a>
+          <!-- <a href="/dashboard">Dashboard</a> -->
+          <!-- <a href="/my-courses">My Courses</a> -->
+          <!-- <a href="/feedback">Feedback</a> -->
+          <!-- <a href="/support">Support</a> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const dropdownLi = document.querySelector('.dropdown-li');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+
+  // Toggle nav menu on mobile
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Toggle dropdown on mobile
+  dropdownToggle.addEventListener('click', (e) => {
+    if(window.innerWidth <= 768){
+      e.preventDefault(); // prevent jump
+      dropdownLi.classList.toggle('active');
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Banner -->
+
+
+
+
+
+  <div class="top-banner">
+    <img src="showcase.jpg" alt="Guitar Course Banner">
+  </div>
+
+  <div class="container">
+    <div class="box" id="course">
+      <h2>🎸 Course Offered</h2>
+      <h3>🎯 Strumming A to Z (For Intermediate & Advance Learners) </h3>
+      <ul class="lesson-list">
+        <li>🔰Introduction to Strumming | <br>🖐️Hand Position & Posture |<br>
+            🪕Basic Strumming Patterns |<br>⏱️Rhythm & Timing |<br>
+            💡Counting & Vocalizing |<br>🎵Dynamics & Accents |<br>
+            🔁Common Strumming Patterns |<br>🔀Transitioning Between Patterns |<br>
+            🧠Strumming with Chord Changes |<br>📈Intermediate to Advanced Patterns |<br>
+            🧏Ear Training & Rhythm Mastery |<br>🧩Strumming for Specific Genres |<br>
+            🎬Play-Along Practice Songs |<br>📚Common Mistakes to Avoid
+
+      </ul>
+       
+      <h3>✅ By the end of the course, learners will:</h3>
+      <ul class="lesson-list">
+        <li>Play dozens of strumming patterns from memory</li>
+        <li>Be able to strum in time with real songs</li>
+        <li>Match rhythm to emotion and song mood</li>
+        <li>Improvise strumming based on feel</li>
+        
+      </ul>
+
+
+       <p class="price-tag">💰 Price: Rs. 500/- per course</p>
+       <br>
+       <h3>.....................................</h3>
+        <br>
+      <h3>🚀 More New Guitar Courses Launching Soon...!!</h3>
+      <ul class="lesson-list">
+        <li>🎸 Get your strings ready – the rhythm is about to drop!</li>
+        <!-- <li>📈 Major & Minor Scales</li>
+        <li>🎼 Improvisation Techniques</li>
+        <li>📝 Song Composition Basics</li>
+        <li>🧏 Ear Training & Rhythm Mastery</li> -->
+      </ul>
+
+
+      
+    </div>
+
+
+
+
+    
+<!-- Refund Policy and Course Access Instructions -->
+
+<div class="box" id="course">
+      <h2>🚫 Refund Policy Disclaimer</h2>
+      <h3>Please Note: </h3>
+      <ul class="lesson-list">
+        <li>All purchases of our online courses are final and non-refundable. 
+          By enrolling in any course, you acknowledge and agree that no refunds, exchanges, or
+           cancellations will be provided under any circumstances.</li>
+
+        <li>We encourage all learners to review the course details, previews, 
+          and eligibility requirements carefully before making a purchase.</li>
+        <!-- <li>For any questions, feel free to contact our support team. Thank you for your understanding and support!</li> -->
+        </ul>
+       
+      <h3>📢 Important Instructions for Course Access</h3>
+      <ul class="lesson-list">
+        <li><b style="color:#fff">1. Fill in Your Details</b> <br>
+          Please provide your Name, Email Address, Mobile Number and select your course accurately in the form.</li>
+        <li><b style="color:#fff">2. Confirm Your Payment </b> <br>
+After making the payment, enter your <b style="color:#fff"><u>Transaction ID</u></b> in the form and click <b style="color:#fff"><u>Submit</u></b> button to initiate the verification process.</li>
+        <li><b style="color:#fff">3. Verification Time </b> <br> 
+✅ It may take up to 24 hours to verify your payment details.</li>
+
+           <li><b style="color:#fff">4. Course Access</b><br>
+Once your payment is successfully verified, you will receive the Course Access Link, 
+along with your Login ID and Password, on both your Email and WhatsApp number.</li>
+
+        
+        
+      </ul>
+
+      <h3>📩 Please double-check that your contact details are correct to avoid any delays.
+Thank you for your patience and support!</h3> <br>
+
+ <h3>📅 Monthly 2 YouTube Live Sessions – Exclusively for Members to Clear All Doubts!
+The schedule, including dates and times, will be made available within the Member Dashboard.</h3>
+      
+    </div>
+
+
+
+    <!-- Online Course Buy form -->
+
+    <div class="box" id="buy">
+      <h2>🛒 Buy Course</h2>
+      <form onsubmit="handleSubmit(event)">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" id="mobile" name="mobile" required />
+
+        <label for="course">Select Course</label>
+        <select id="course" name="course" onchange="updatePrice()" required>
+          <option value="">-- Select --</option>
+          <option value="beginner">Strumming A to Z  - Rs.500/- </option>
+          <!-- <option value="intermediate">Intermediate Level - Rs.500/- </option> -->
+        </select>
+
+        <p id="price">Pay Rs. 500/-</p>
+
+        <div class="qr-code">
+          <h4>📱 Scan to Pay</h4> <br>
+          <img src="QR_Code.png" alt="QR Code" />
+          <p>Pay Rs. 500/- via UPI</p>
+        </div>
+
+        <label for="transactionId">Enter UPI Transaction ID</label>
+        <input type="text" id="transactionId" name="transactionId" required />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- Student Feedback Section -->
+<section id="student-feedback" style="padding: 2rem; background-color: #f9f9f9;">
+  <h2 id = "hl" style="text-align: center; color: #333; font-size: 2rem; margin-bottom: 1rem;">
+    What My Students Say
+  </h2>
+  <div  style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 0 auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+    <iframe src="https://www.youtube.com/embed/s3Godbpg6pI?si=8LfZFMvPmXUj4ndN" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    </iframe>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="shorts-slider">
+  <h2>🎬 Watch My YouTube Shorts</h2>
+  <div class="shorts-nav">
+    <button class="nav-btn left" onclick="scrollShorts('left')">⟵</button>
+    <div class="shorts-container" id="shortsContainer">
+      <div class="shorts-wrapper">
+        <a href="https://youtube.com/shorts/scMidiv3OoI?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/scMidiv3OoI/hqdefault.jpg" alt="Short 1">
+        </a>
+        <a href="https://youtube.com/shorts/7qBI6_KKAj4?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/7qBI6_KKAj4/hqdefault.jpg" alt="Short 2">
+        </a>
+        <a href="https://youtube.com/shorts/wFmHYRQ4iOc?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/wFmHYRQ4iOc/hqdefault.jpg" alt="Short 3">
+        </a>
+
+
+         <a href="https://youtube.com/shorts/foGuQ19phOg?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/foGuQ19phOg/hqdefault.jpg" alt="Short 1">
+        </a>
+        <a href="https://youtube.com/shorts/6KAE9xH1KAg?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/6KAE9xH1KAg/hqdefault.jpg" alt="Short 2">
+        </a>
+        <a href="https://youtube.com/shorts/XFhk42Xl4wc?feature=share" target="_blank">
+          <img src="https://img.youtube.com/vi/XFhk42Xl4wc/hqdefault.jpg" alt="Short 3">
+        </a>
+
+
+        <a href="https://youtube.com/shorts/koUqwNv6sIw?feature=share" target="_blank">
+        <img src="https://img.youtube.com/vi/koUqwNv6sIw/hqdefault.jpg" alt="Short 1">
+        </a>
+        <a href="https://youtube.com/shorts/4u0tUJGVUGY?feature=share" target="_blank">
+        <img src="https://img.youtube.com/vi/4u0tUJGVUGY/hqdefault.jpg" alt="Short 2">
+        </a>
+        <a href="https://youtube.com/shorts/DdiuOaWMmLo?feature=share" target="_blank">
+        <img src="https://img.youtube.com/vi/DdiuOaWMmLo/hqdefault.jpg" alt="Short 3">
+        </a>
+
+
+
+
+
+
+      </div>
+    </div>
+    <button class="nav-btn right" onclick="scrollShorts('right')">⟶</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Contact Us -->
+  <footer >
+    <h3 id="contact">📞 Contact Us</h3>
+    <p>Email: rohitmusic700@gmail.com</p>
+    <p>Phone: +91-9304631957</p>
+    <p>Follow us on YouTube:@GuitarCoverwithRohit</p>
+    <p>Instagram : instagram.com/guitarcoverwithrohit</p>
+    <p>© 2025 @GuitarCoverWithRohit</p>
+    <div class="footer-content">
+      <p style="text-align: center;font-size:medium;background-color: #000;">Designed by:- <a href="" style="text-decoration: none;color: white;background-color: black;">Anurag Mathews (FlexMatty)</a></p>
+      </div>
+
+  </footer>
+
+ 
+
+
+
+
+</body>
+</html>
