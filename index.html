@@ -526,7 +526,7 @@ footer {
       })
       .then(res => res.text())
       .then(response => {
-        showBanner('Payment and Registration Successful! Course link will be sent shortly to your Email and WhatsApp.');
+        showBanner('Registration Complete! Once your payment is verified, the course link will be sent to your registered email within 24 hours.');
         sendConfirmationEmail(data.get("email"), data.get("name"));
         form.reset();
         document.getElementById("price").innerText = "Rs. 500/-";
