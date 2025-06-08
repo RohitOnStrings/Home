@@ -871,8 +871,29 @@ The schedule, including dates and times, will be made available within the Membe
 
   </footer>
 
- 
+<!--   Visitor Count -->
+ <div id="visitor-counter" style="text-align:center; padding: 10px; font-size: 16px; margin-top: 20px;">
+  🔢 Total Visitors: <span id="visitCount">Loading...</span>
+</div>
+  
+<!-- Visitor Counter Script -->
+<script>
+  const namespace = "guitarcoverwithrohit";
+  const key = "homepage";  // You can change this per page if needed
 
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.json();
+    })
+    .then(data => {
+      document.getElementById("visitCount").textContent = data.value;
+    })
+    .catch(error => {
+      console.error("Visitor counter error:", error);
+      document.getElementById("visitCount").textContent = "Unavailable";
+    });
+</script>
 
 
 
