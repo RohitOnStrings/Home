@@ -478,6 +478,36 @@ footer {
     }
 
 
+    /* Buy Button */
+.buy-button {
+  display: inline-block;
+    margin: 0 auto;
+  padding: 12px 24px;
+  background-color: #007BFF; /* Bootstrap blue */
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .buy-button-container {
+  text-align: center;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .buy-button {
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
 
 
 
@@ -580,6 +610,7 @@ function scrollShorts(direction) {
         <a href="#shortsContainer" class="dropdown-toggle">Member Portal ▾</a>
         <div class="dropdown-content">
           <a href="https://rohitonstrings.github.io/MemberPortal/">Login - Strumming Members</a>
+          <a href="https://rohitonstrings.github.io/MemberPortal2/">Login - Fretwork:Finger Course </a>
           <!-- <a href="/dashboard">Dashboard</a> -->
           <!-- <a href="/my-courses">My Courses</a> -->
           <!-- <a href="/feedback">Feedback</a> -->
@@ -611,50 +642,39 @@ function scrollShorts(direction) {
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- Banner -->
-
-
-
-
 
   <div class="top-banner">
     <img src="showcase.jpg" alt="Guitar Course Banner">
   </div>
 
+<!-- Course and Buy Container -->
+ <BR></BR>
+ <h1 style="text-align: center;background-color: #fff700;color: #000;">COURSES OFFERED</h1>
   <div class="container">
-    <div class="box" id="course">
-      <h2>🎸 Course Offered</h2>
-      <h3>🎯 Strumming A to Z (For Intermediate & Advance Learners) </h3>
-      <ul class="lesson-list">
-        <li>🔰Introduction to Strumming | <br>🖐️Hand Position & Posture |<br>
-            🪕Basic Strumming Patterns |<br>⏱️Rhythm & Timing |<br>
-            💡Counting & Vocalizing |<br>🎵Dynamics & Accents |<br>
-            🔁Common Strumming Patterns |<br>🔀Transitioning Between Patterns |<br>
-            🧠Strumming with Chord Changes |<br>📈Intermediate to Advanced Patterns |<br>
-            🧏Ear Training & Rhythm Mastery |<br>🧩Strumming for Specific Genres |<br>
-            🎬Play-Along Practice Songs |<br>📚Common Mistakes to Avoid
+   
+    <!-- Strumming course -->
 
+    <div class="box" id="course"> 
+      <h2 style="background-color: #254D70;">🎯 Strumming A to Z  <br></h2> <br>
+      <h4>(For Intermediate & Advance Learners)</h4>
+      <ul class="lesson-list">
+        <li>🔰Introduction to Strumming </li>
+        <li>🖐️Hand Position & Posture </li>
+        <li>🪕Basic Strumming Patterns </li>
+        <li>⏱️Rhythm & Timing</li>
+        <li>💡Counting & Vocalizing</li>
+        <li>🎵Dynamics & Accents</li>
+        <li>🔁Common Strumming Patterns </li>
+        <li>🔀Transitioning Between Patterns</li>
+        <li>🧠Strumming with Chord Changes</li>
+        <li>📈Intermediate to Advanced Patterns</li>
+        <li>🧏Ear Training & Rhythm Mastery</li>
+        <li>🧩Strumming for Specific Genres</li>
+        <li>🎬Play-Along Practice Songs</li>
+        <li>📚Common Mistakes to Avoid</li>
       </ul>
-       
+       <hr><br>
       <h3>✅ By the end of the course, learners will:</h3>
       <ul class="lesson-list">
         <li>Play dozens of strumming patterns from memory</li>
@@ -667,27 +687,123 @@ function scrollShorts(direction) {
 
        <p class="price-tag">💰 Price: Rs. 500/- per course</p>
        <br>
-       <h3>.....................................</h3>
-        <br>
-      <h3>🚀 More New Guitar Courses Launching Soon...!!</h3>
-      <ul class="lesson-list">
-        <li>🎸 Get your strings ready – the rhythm is about to drop!</li>
-        <!-- <li>📈 Major & Minor Scales</li>
-        <li>🎼 Improvisation Techniques</li>
-        <li>📝 Song Composition Basics</li>
-        <li>🧏 Ear Training & Rhythm Mastery</li> -->
-      </ul>
 
+       <div class="buy-button-container">
+  <a href="#buy" class="buy-button">Buy</a>
+</div>
+   
 
       
     </div>
 
+<!-- Fretwork 101- finger course -->
+
+    <div class="box" id="course">
+      <h5 style="text-align: center;background-color: #000000;">🚀 New Course Launched Today !! </h5>
+      <h2 style="background-color: brown;">🎯 Fretwork 101: Finger Course </h2> <br>
+      <h4>(For Intermediate & Advance Learners)</h4>
+      <br>
+      <ul class="lesson-list">
+        <li>🎸 Finger Placement Basics </li>
+        <li>🔢 Finger Numbering System</li>
+        <li>🪝 Anchor & Stretch Techniques </li>
+        <li>🧠 Muscle Memory Training</li>
+        <li>🪜 Fretboard Climbing Exercises</li>
+        <li>🌀 Fingerstyle Warm-ups</li>
+        <li>⏱️ Speed & Accuracy Practice</li>
+        <li>🌟 Bonus Outcome : 🎵 Learn to Play Any Bollywood Song Easily!!</li>
+      </ul>
+       <hr><br>
+      <h3>✅ By the end of the course, learners will:</h3>
+      <ul class="lesson-list">
+        <li>Confidently Navigate the Fretboard</li>
+        <li>Build Strong Finger Independence & Control</li>
+        <li>Improve Speed, Timing, and Accuracy</li>
+        <li>Develop Muscle Memory</li>
+        <li>Apply Finger Skills to Real Songs</li>
+      </ul>
 
 
+       <p class="price-tag">💰 Price: Rs. 500/- per course</p>
+       <br>
 
+       <div class="buy-button-container">
+  <a href="#buy" class="buy-button">Buy</a>
+</div>
     
-<!-- Refund Policy and Course Access Instructions -->
+         
+      
+    </div>
 
+<!-- Beginner Course -->
+
+<div class="box" id="course">
+      <h5 style="text-align: center;background-color: #000000;">🚀 Coming Soon !! </h5>
+      <h2 style="background-color: #D50B8B;text-align: center;">🎯 Beginner’s Guitar Bootcamp: Complete Beginner’s Guitar Course </h2> <br>
+      <h3 style="text-align: left;">  📦<u>Guitar Included & Excluded Options Available </u></h3><br>
+      <h3>🎯 Course Features – Guitar + Training</h3>
+      <ul class="lesson-list">
+        <!-- <h3 style="text-align: center;">  📦<u>Guitar Included</u></h3><br> -->
+        <li>Get a high-quality beginner guitar delivered to your home - Perfectly set up for learning</li>
+        
+
+        <h4>🎸 Guitar Anatomy & Tuning</h4>      
+
+        <h4>🧠 Learn Guitar from Scratch</h4>        
+
+        <h4>🎼 Basic Music Theory</h4>        
+
+        <h4>🔄 Strumming & Rhythm Patterns</h4>      
+
+        <h4>✋ Finger Exercises & Dexterity</h4>        
+
+        <h4>🔊 Open Chord Mastery</h4>       
+
+        <h4>🎵 Play Real Songs</h4>
+      
+
+      </ul>
+      <br>
+       <hr><br>
+      <h3>✅ By the end of the course, learners will:</h3>
+      <ul class="lesson-list">
+        <li>Confidently Hold and Play the Guitar</li>
+        <li>Perform real Bollywood hits with ease</li>
+        <li>Read and Understand Chord Charts & Strumming Patterns</li>
+        <li>Switch Smoothly Between Open Chords</li>
+        <li>Strum with Rhythm and Timing</li>
+        <li>Sing and Play Together</li>
+        <li>Apply Basic Music Theory to Songs</li>
+        
+      </ul>
+       
+        <hr> <br>
+       <h4>The course is available in two pricing options:</h4> <br>
+      <li>With Guitar – Ideal for those who don’t own a guitar.</li>
+      <li>Without Guitar – For learners who already have their own instrument.</li> <br>
+      <h4>👉 Prices will vary based on the selected option.</h4> <br>
+
+       <!-- <p class="price-tag">💰 Price: Rs. 500/- per course</p> -->
+       <br>
+    
+  <div class="buy-button-container">
+    <a href="#course" class="buy-button">Coming Soon</a>
+  <!-- <a href="#buy" class="buy-button">Buy</a> -->
+</div>
+
+     
+    </div>
+  
+  </div>
+
+
+
+<!-- Refund and Buy Course Container -->
+
+ 
+       
+<!-- Refund Policy and Course Access Instructions -->
+ <div class="container">
 <div class="box" id="course">
       <h2>🚫 Refund Policy Disclaimer</h2>
       <h3>Please Note: </h3>
@@ -746,8 +862,10 @@ The schedule, including dates and times, will be made available within the Membe
         <select id="course" name="course" onchange="updatePrice()" required>
           <option value="">-- Select --</option>
           <option value="Strumming A to Z">Strumming A to Z  - Rs.500/- </option>
-          <!-- <option value="intermediate">Intermediate Level - Rs.500/- </option> -->
-        </select>
+          <option value="Fretwork 101: Finger Course">Fretwork 101: Finger Course  - Rs.500/- </option>
+          <!-- <option value="Beginner’s Guitar Bootcamp with Guitar">Beginner’s Guitar Bootcamp With Guitar  - Rs.6000/- </option> -->
+          <!-- <option value="Beginner’s Guitar Bootcamp">Beginner’s Guitar Bootcamp  - Rs.2500/- </option> -->
+          </select>
 
         <p id="price">Pay Rs. 500/-</p>
 
@@ -770,11 +888,6 @@ The schedule, including dates and times, will be made available within the Membe
 
 
 
-
-
-
-
-
 <!-- Student Feedback Section -->
 <section id="student-feedback" style="padding: 2rem; background-color: #f9f9f9;">
   <h2 id = "hl" style="text-align: center; color: #333; font-size: 2rem; margin-bottom: 1rem;">
@@ -789,16 +902,6 @@ The schedule, including dates and times, will be made available within the Membe
     </iframe>
   </div>
 </section>
-
-
-
-
-
-
-
-
-
-
 
 
 
