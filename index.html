@@ -508,7 +508,25 @@ footer {
   }
 }
 
+/* Blinking effect */
+.blink {
+      animation: blink-animation 1s steps(2, start) infinite;
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+    }
 
+    @keyframes blink-animation {
+      0% {
+        visibility: visible;
+      }
+      50% {
+        visibility: hidden;
+      }
+      100% {
+        visibility: visible;
+      }
+    }
 
 
 </style>
@@ -699,10 +717,10 @@ function scrollShorts(direction) {
 <!-- Fretwork 101- finger course -->
 
     <div class="box" id="course">
-      <h5 style="text-align: center;background-color: #000000;">🚀 New Course Launched Today !! </h5>
-      <h2 style="background-color: brown;">🎯 Fretwork 101: Finger Course </h2> <br>
+      <h5 class="blink" style="text-align: center;background-color: #fff;">🚀 New Course Launched - Enroll Today !! </h5>
+      <h2   style="background-color: brown;">🎯 Fretwork 101: Finger Course </h2> <br>
       <h4>(For Intermediate & Advance Learners)</h4>
-      <br>
+      
       <ul class="lesson-list">
         <li>🎸 Finger Placement Basics </li>
         <li>🔢 Finger Numbering System</li>
@@ -738,7 +756,7 @@ function scrollShorts(direction) {
 <!-- Beginner Course -->
 
 <div class="box" id="course">
-      <h5 style="text-align: center;background-color: #000000;">🚀 Coming Soon !! </h5>
+      <h4 style="text-align: center;background-color: #000000;">🚀 Coming Soon !! </h4>
       <h2 style="background-color: #D50B8B;text-align: center;">🎯 Beginner’s Guitar Bootcamp: Complete Beginner’s Guitar Course </h2> <br>
       <h3 style="text-align: left;">  📦<u>Guitar Included & Excluded Options Available </u></h3><br>
       <h3>🎯 Course Features – Guitar + Training</h3>
