@@ -172,11 +172,64 @@ nav {
       flex: 1 1 300px;
       padding: 1.5rem;
       /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
-      background-color: #4A102A;
+      background-color: #0A400C;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(255, 87, 51, 0.6);
       animation: zoomIn 1.5s ease-out;
     }
+
+  .box1 {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #0A400C;
+      border-radius: 12px;
+      box-shadow: 0 0 100px rgba(255, 87, 51, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+  .box2 {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #4F1C51;
+      border-radius: 12px;
+      box-shadow: 0 0 100px rgba(4, 223, 187, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+  .box3 {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #2A004E;
+      border-radius: 12px;
+      box-shadow: 0 0 100px rgba(255, 251, 0, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+
+.box4 {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #6A0066;
+      border-radius: 12px;
+      box-shadow: 0 0 100px rgba(255, 87, 51, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+    .box5 {
+      flex: 1 1 300px;
+      padding: 1.5rem;
+      /* background: linear-gradient(145deg, #3a3a3a, #1a1a1a); */
+      background-color: #543A14;
+      border-radius: 12px;
+      box-shadow: 0 0 100px rgba(0, 4, 255, 0.6);
+      animation: zoomIn 1.5s ease-out;
+    }
+
+
     form {
       display: flex;
       flex-direction: column;
@@ -217,9 +270,22 @@ nav {
     }
     .lesson-list li {
       margin-bottom: 0.5rem;
-      color: #FCF259;
+      color: #ffffff;
       text-align: justify;
     }
+
+        .lesson-list1 {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+    .lesson-list1 li {
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+      /* text-align: justify; */
+      font-weight: bold;
+    }
+
+
     .price-tag {
       margin-top: 1rem;
       font-weight: bold;
@@ -486,13 +552,14 @@ footer {
   display: inline-block;
     margin: 0 auto;
   padding: 12px 24px;
-  background-color: #007BFF; /* Bootstrap blue */
-  color: white;
+  background-color: #ffffff; /* Bootstrap blue */
+  color: #09122C;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
   }
 
   .buy-button-container {
@@ -517,6 +584,14 @@ footer {
       color: red;
       font-weight: bold;
       font-size: 20px;
+    }
+
+    .blink1 {
+      animation:backwards;
+      animation: blink-animation 2s steps(2, start) infinite;
+      color: rgb(3, 7, 69);
+      font-weight: bold;
+      font-size: 18px;
     }
 
     @keyframes blink-animation {
@@ -623,8 +698,9 @@ function scrollShorts(direction) {
     </div>
     <ul class="nav-links" id="nav-links">
       <li><a href="https://rohitonstrings.github.io/Home/">Home</a></li>
-      <li><a href="#course">Course</a></li>
-      <li><a href="#buy">Buy</a></li>
+      <li><a href="#course">Buy Course</a></li>
+      <!-- <li><a href="#course">Buy Guitar & Musical Instruments</a></li>  -->
+      <li><a href="#buy">Buy Guitar & Musical Instruments</a></li>
       <li><a href="#hl">Happy Learners</a></li>
        <li><a href="#contact">Contact Us</a></li>
       <li class="dropdown-li">
@@ -666,7 +742,7 @@ function scrollShorts(direction) {
   <!-- Banner -->
 
   <div class="top-banner">
-    <img src="showcase.jpg" alt="Guitar Course Banner">
+    <img src="banner.png" alt="Guitar Course Banner">
   </div>
 
 <!-- Course and Buy Container -->
@@ -676,7 +752,8 @@ function scrollShorts(direction) {
    
     <!-- Strumming course -->
 
-    <div class="box" id="course"> 
+    <div class="box1" id="course"> 
+      <h4 class="" style="text-align: center;background-color: #01082a;">🏆⭐⭐⭐⭐⭐ Best-Seller </h4>
       <h2 style="background-color: #254D70;">🎯 Strumming A to Z  <br></h2> <br>
       <h4>(For Intermediate & Advance Learners)</h4>
       <ul class="lesson-list">
@@ -710,7 +787,7 @@ function scrollShorts(direction) {
        <br>
 
        <div class="buy-button-container">
-  <a href="#buy" class="buy-button">Buy</a>
+  <a href="https://rohitonstrings.github.io/payment/" class="buy-button">Click to Buy</a>
 </div>
    
 
@@ -719,8 +796,8 @@ function scrollShorts(direction) {
 
 <!-- Fretwork 101- finger course -->
 
-    <div class="box" id="course">
-      <h5 class="blink" style="text-align: center;background-color: #fff;">🚀 New Course Launched - Enroll Today !! </h5>
+    <div class="box2" id="course">
+      <h4 class="" style="text-align: center;background-color: #01082a;">🚀 Trending Course - Enroll Today !! </h4>
       <h2   style="background-color: brown;">🎯 Fretwork 101: Finger Course </h2> <br>
       <h4>(For Intermediate & Advance Learners)</h4>
       
@@ -749,7 +826,7 @@ function scrollShorts(direction) {
        <br>
 
        <div class="buy-button-container">
-  <a href="#buy" class="buy-button">Buy</a>
+  <a href="https://rohitonstrings.github.io/payment/" class="buy-button">Click to Buy</a>
 </div>
     
          
@@ -758,14 +835,14 @@ function scrollShorts(direction) {
 
 <!-- Beginner Course -->
 
-<div class="box" id="course">
-      <h4 style="text-align: center;background-color: #000000;">🚀 Coming Soon !! </h4>
-      <h2 style="background-color: #D50B8B;text-align: center;">🎯 Beginner’s Guitar Bootcamp: Complete Beginner’s Guitar Course </h2> <br>
-      <h3 style="text-align: left;">  📦<u>Guitar Included & Excluded Options Available </u></h3><br>
-      <h3>🎯 Course Features – Guitar + Training</h3>
+<div class="box3" id="course">
+      <h4 class="blink" style="text-align: center;background-color: #01082a;color: white;">🚀 Coming Soon !! </h4>
+      <h2 style="background-color: #D50B8B;text-align: center;">🎯 Beginner’s Guitar Course </h2> <br>
+      <!-- <h3 style="text-align: left;">  📦<u>Guitar Included & Excluded Options Available </u></h3><br> -->
+      <h3>🎯 Course Features – Learn From Scratch!!</h3>
       <ul class="lesson-list">
         <!-- <h3 style="text-align: center;">  📦<u>Guitar Included</u></h3><br> -->
-        <li>Get a high-quality beginner guitar delivered to your home - Perfectly set up for learning</li>
+        <!-- <li>Get a high-quality beginner guitar delivered to your home - Perfectly set up for learning</li> -->
         
 
         <h4>🎸 Guitar Anatomy & Tuning</h4>      
@@ -799,10 +876,10 @@ function scrollShorts(direction) {
       </ul>
        
         <hr> <br>
-       <h4>The course is available in two pricing options:</h4> <br>
+       <!-- <h4>The course is available in two pricing options:</h4> <br>
       <li>With Guitar – Ideal for those who don’t own a guitar.</li>
       <li>Without Guitar – For learners who already have their own instrument.</li> <br>
-      <h4>👉 Prices will vary based on the selected option.</h4> <br>
+      <h4>👉 Prices will vary based on the selected option.</h4> <br> -->
 
        <!-- <p class="price-tag">💰 Price: Rs. 500/- per course</p> -->
        <br>
@@ -818,54 +895,46 @@ function scrollShorts(direction) {
   </div>
 
 
-
-<!-- Refund and Buy Course Container -->
-
- 
-       
-<!-- Refund Policy and Course Access Instructions -->
+<!-- Sell Guitar -->
  <div class="container">
-    <!-- Online Course Buy form -->
+      <div class="box4" id="buy"> 
+      <h5 class="blink1" style="text-align: center;background-color: #faf9f5;">🚀 🪔🏹 “Dusshera Launch ” </h5>  
+      <h2 style="background-color: #254D70;text-align: center;">Buy Your First Guitar! <br></h2> <br>
+      <h4>🔥Affordable, Reliable, Ready to Play – The Perfect First Guitar Awaits You!</h4> <br>
+      <h3 style="background-color: #f0f0f0;text-align: center;color: red;">🎸 Why Buy From Us?</h3>
+      <ul class="lesson-list1">
+        <li>🎶 Wide Range of Instruments – Guitars, Keyboards, Drums, Tabla & more under one roof!</li>
+        <li>⭐ Premium Quality Guaranteed – Only trusted brands & durable products. </li>
+        <li>💰 Affordable Prices – Best deals & value for money.</li>
+        <li>🚚 Fast & Safe Delivery – Right at your doorstep, anywhere in India.</li>
+        <li>🛡️ Secure Payment Options – UPI, Razorpay</li>
+        <li>🎁 Exciting Offers & Discounts – Save more with special festive deals.</li>
+        <li> 🧑‍🏫 Beginner to Pro Friendly – Instruments for all skill levels.</li>
+        <li>🎧 Free Guidance & Support – Expert help in choosing the right instrument.</li>
+        <li>🛒 Easy Return & Replacement – Hassle-free shopping experience.</li>
+        <li>📦 Carefully Packed – Instruments shipped with extra safety.</li>
+        
+      </ul>
+       <hr><br>
+      <!-- <h3>✅ By the end of the course, learners will:</h3>
+      <ul class="lesson-list">
+       
+      </ul> -->
 
-    <div class="box" id="buy">
-      <h2>🛒 Buy Course</h2>
-      <form onsubmit="handleSubmit(event)">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+<!-- 
+       <p class="price-tag">💰 Price: Rs. 500/- per course</p>
+       <br> -->
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+       <div class="buy-button-container"> 
+        
+  <a href="#" class="buy-button buy" style="font-weight: bold;">Launching This Dusshera!!</a>
+</div>
+   
 
-        <label for="mobile">Mobile Number</label>
-        <input type="text" id="mobile" name="mobile" required />
-
-        <label for="course">Select Course</label>
-        <select id="course" name="course" onchange="updatePrice()" required>
-          <option value="">-- Select --</option>
-          <option value="Strumming A to Z">Strumming A to Z  - Rs.500/- </option>
-          <option value="Fretwork 101: Finger Course">Fretwork 101: Finger Course  - Rs.500/- </option>
-          <!-- <option value="Beginner’s Guitar Bootcamp with Guitar">Beginner’s Guitar Bootcamp With Guitar  - Rs.6000/- </option> -->
-          <!-- <option value="Beginner’s Guitar Bootcamp">Beginner’s Guitar Bootcamp  - Rs.2500/- </option> -->
-          </select>
-
-        <p id="price">Pay Rs. 500/-</p>
-
-        <div class="qr-code">
-          <h2>📱 Scan & Pay ₹500/-</h2> <br>
-          <p>Use any UPI app (PhonePe, GPay, Paytm, etc.)</p> <br>
-          <img src="QR_Code.png" alt="QR Code" />
-<!--           <p>Pay Rs. 500/- via UPI</p> -->
-          <p>(After making the payment using the QR code above 👆, please enter the correct Transaction ID 👇 as shown on your payment receipt)</p>
-        </div>
-
-        <label for="transactionId">Enter UPI Transaction ID(from payment receipt)</label>
-        <input type="text" id="transactionId" name="transactionId" required />
-
-        <button type="submit">Submit</button>
-      </form>
+      
     </div>
 
-<div class="box" id="course">
+<div class="box5" id="course">
       <h2>🚫 Refund Policy Disclaimer</h2>
       <h3>Please Note: </h3>
       <ul class="lesson-list">
@@ -882,15 +951,14 @@ function scrollShorts(direction) {
       <ul class="lesson-list">
         <li><b style="color:#fff">1. Fill in Your Details</b> <br>
           Please provide your Name, Email Address, Mobile Number and select your course accurately in the form.</li>
-        <li><b style="color:#fff">2. Confirm Your Payment </b> <br>
+        <!-- <li><b style="color:#fff">2. Confirm Your Payment </b> <br>
 After making the payment, enter your <b style="color:#fff"><u>Transaction ID</u></b> in the form and click <b style="color:#fff"><u>Submit</u></b> button to initiate the verification process.</li>
         <li><b style="color:#fff">3. Verification Time </b> <br> 
-✅ It may take up to 24 hours to verify your payment details.</li>
+✅ It may take up to 24 hours to verify your payment details.</li> -->
 
            <li><b style="color:#fff">4. Course Access</b><br>
 Once your payment is successfully verified, you will receive the Course Access Link, 
 along with your Login ID and Password, on both your Email and WhatsApp number.</li>
-
         
         
       </ul>
@@ -904,6 +972,9 @@ The schedule, including dates and times, will be made available within the Membe
     </div>
  
   </div>
+
+
+
 
 <!-- Student Feedback Section -->
 <section id="student-feedback" style="padding: 2rem; background-color: #f9f9f9;">
@@ -1015,3 +1086,4 @@ The schedule, including dates and times, will be made available within the Membe
   
 </body>
 </html>
+
